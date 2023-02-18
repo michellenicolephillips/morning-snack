@@ -3,6 +3,8 @@ import Navigation from '../src/components/navigation';
 import Home from '../src/pages/Home';
 import Checkout from '../src/pages/Checkout';
 import Catering from '../src/pages/Catering';
+import Header from '../src/components/header';
+import Footer from '../src/components/footer';
 import {
      BrowserRouter as Router,
      Routes,
@@ -10,6 +12,8 @@ import {
 
 function App() {
   return (
+     <div>
+          <Header/>
           <Router>
                <Navigation/>
                <Routes>
@@ -20,6 +24,9 @@ function App() {
                     <Route exact path="/checkout" element={<Checkout />} />
                </Routes>
           </Router>
+          <Footer/>
+     </div>
+         
      );
 }
 
