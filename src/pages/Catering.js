@@ -13,10 +13,12 @@ class Catering extends React.Component {
                    <h4>Tier 2 - American Breakfast Package</h4>
                    <p>Scrambled Eggs, bacon, breakfast sausage, southwestern breakfast potatoes, and an assortment of pastries. Coffee, your choice of 2 types of juices, and water available for beverages</p>
                    <h4>Add On- Omelette Station</h4>
-                   <p>Filling Options:</p>
-                   <p>Proteins: Bacon, Pork Sausage, Turkey Sausage, Chicken, Vegan Sausage, Tofu</p>
-                   <p>Vegetables: Tomato, Onion, Mushroom, Jalapeno, Red and Green Bell Pepper, Spinach, Avocado</p>
-                   <p>Cheeses: Cheddar, Swiss, Mozzarella, Pepper Jack</p>
+                   <p>An omelette chef or two, depending on your event size, will be provided for the omelette station. Below are the filling options.</p>
+                   <ul>
+                        <li>Proteins: Bacon, Pork Sausage, Turkey Sausage, Chicken, Vegan Sausage, Tofu</li>
+                        <li>Vegetables: Tomato, Onion, Mushroom, Jalapeno, Red and Green Bell Pepper, Spinach, Avocado, Green Onion</li>
+                        <li>Cheeses: Cheddar, Swiss, Mozzarella, Pepper Jack</li>
+                   </ul>
                    <h3>Lunch</h3>
                    <h4>Tier 1</h4>
                    <p>Light Lunch</p>
