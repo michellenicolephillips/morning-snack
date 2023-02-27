@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+/*Universal CSS*/
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #591902;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  font: Arial, Helvetica, sans-serif;
+  color: #591902;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #EBEDF2;
+  font-family: Arial, Helvetica, serif;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 , h2, h3, h4 {
+  font-family: Garamond, sans-serif;
+  color: #591902;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+  background-color: #BF7960;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+/*Classes*/
+
+/* IDs*/
+
+/*Specific CSS Features*/
