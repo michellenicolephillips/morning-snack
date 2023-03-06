@@ -3,10 +3,11 @@ import React from 'react';
 class Footer extends React.Component {
 
      render() {
-          return (<>
-              <h3>Footer</h3>
-              <p>This is morning snack's temp footer</p>
-          </>  
+          return (
+          <footer>
+              <h3>Morning Snack</h3>
+              <address>123 Brunch Way Dallas, TX 75244</address>
+          </footer>
           )  
      }
 }
