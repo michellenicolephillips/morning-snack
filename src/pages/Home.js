@@ -33,12 +33,12 @@ class Home extends React.Component {
                     <li>Veggie Sandwich ($10.00)</li>
               </ul>
 
-              <h2>Brunch:</h2>
+              <h2>Entrees:</h2>
               <ul>
                     <li>French Toast ($14.00)</li>
                     <li>Pancakes ($16.00)</li>
                     <li>Eggs Benedicts ($15.00)</li>
-                    <li>Poke ($20.00)</li>
+                    <li>Bowls (Poke or Fruit) [Prices are subject to change]</li>
                     <li>Salmon ($25.00)</li>
                     <li>Burger ($18.00)</li>
               </ul>
