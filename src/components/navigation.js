@@ -1,19 +1,29 @@
 import React from 'react';
+import { Button, Nav, NavItem, NavLink } from 'react-bootstrap';
 
-
-
-/* Navbar component to navigate to various sections of the page, smooth scroll to each section */
 
 class Navigation extends React.Component {
 
-     render() {
-          return (
-               <section className='navbar'>
-                    <a href="/" className="nav-link">Menu</a>
-                    <a href="/catering" className="nav-link">Catering</a>
-                    <a href="/about" className="nav-link">About Us</a>
-                    <a href="/checkout" className="nav-link">Checkout</a>
-               </section>
+     render() { 
+          return ( 
+               <>
+               <Nav className="justify-content-end mt-4 mb-4" gap={5}>
+                    <NavItem>
+                         <NavLink href="/">MENU</NavLink>
+                    </NavItem>
+                    <NavItem>
+                         <NavLink href="/catering">CATERING</NavLink>
+                    </NavItem>
+                    <NavItem>
+                         <NavLink href="/about">ABOUT</NavLink>
+                    </NavItem>
+                    <NavItem>
+                         <NavLink href="/checkout">CHECKOUT</NavLink>
+                    </NavItem>    
+
+                    <Button variant="warning" className="reserveButton" href="/reservations">BOOK A RESERVATION</Button>           
+               </Nav>
+               </>
           )
      }
 }

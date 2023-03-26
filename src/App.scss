@@ -1,0 +1,127 @@
+// imports 
+@import "./variables";
+
+
+// HEADER
+
+.header {
+    font-family: "Lulo Clean One", sans-serif;
+    color: white;
+    background-color: #591902;
+    display: block;
+    height: 100px;
+}
+
+.headerLogo {
+    background-image: url(assets/logo.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100px; 
+    width: 250px; 
+}
+
+.reserveButton {
+    color: black;
+}
+
+
+
+//MENU
+
+.menuHero {
+    width: 100%;
+    height: 700px;
+    background-image: url(assets/cafe-room.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menuHeader {
+    font-family: 'Avenir LT Std', sans-serif;
+}
+
+.menuOpener {
+    margin: 0;
+    font-size: 25px;
+    text-indent: 2rem;
+    text-justify: auto;
+    padding: 40px;
+}
+
+.pageHeader {
+    font-family: "Lulo Clean Outline", sans-serif;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.dailyTimes {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.menuSelection1 {
+    background-color: #D9981E;
+    font-family: 'Avenir LT Std', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.menuSelection2 {
+    background-color: #F28B0C;
+    font-family: 'Avenir LT Std', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.menuSelection3 {
+    background-color: #BF7960;
+    font-family: 'Avenir LT Std', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.menuCategory {
+    font-family: "Lulo Clean Bold", sans-serif;
+    font-size: 25px;
+    padding-bottom: 40px;
+}
+
+.menuItem {
+    padding-bottom: 10px;
+}
+
+.itemDescription {
+    padding-bottom: 30px;
+}
+
+
+
+// RESERVATIONS
+
+.reserveHero {
+    width: auto;
+    height: 1000px;
+    background-image: url(assets/cafe-entrance.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+// FOOTER
+.footerColor {
+    background-color: $footer-bkg-color;
+    color: $footer-txt-color;
+}
+
+.footerHeader {
+    font-family: "Lulo Clean Bold", sans-serif;
+    font-size: 30px;
+    padding-left: 30px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+

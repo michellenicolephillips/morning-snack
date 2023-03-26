@@ -1,0 +1,49 @@
+// COLORS
+$background-color: #EBEDF2;
+$text-color: #000000;
+$btn-width: 120px;
+$btn-height: 40px;
+$block-padding: 100px;
+
+$footer-bkg-color: #591902;
+$footer-txt-color: white;
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+ 
+#{$a-tags} {
+  color: white;
+  text-decoration: none;
+}
+
+#{$a-tags-hover} {
+  color: #D9981E;
+}
+
+
+
+//FONTS:
+
+//sets Lulo Clean One font --> headers
+@font-face {
+  font-family: "Lulo Clean One";
+  src: url("./fonts/lulo-clean-one.ttf") format("truetype");
+}
+
+//sets Lulo Clean Outline font --> page headers
+@font-face {
+  font-family: "Lulo Clean Outline";
+  src: url("./fonts/lulo-clean-outline.otf") format("truetype");
+}
+
+//sets Lulo Clean Bold font --> menu categories
+@font-face {
+  font-family: "Lulo Clean Bold";
+  src: url("./fonts/lulo-clean-bold.ttf") format("truetype");
+}
+
+//sets Avenir LT STD font --> paragraphs
+@font-face {
+  font-family: "Avenir LT Std", sans-serif;
+  src: url("https://fonts.cdnfonts.com/css/avenir-lt-std");
+}

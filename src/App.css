@@ -2,7 +2,7 @@
 
 header {
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: black;
   background-color: #591902;
 }
 
@@ -37,83 +37,53 @@ footer {
 
 /*Classes*/
 
+/*
 .header {
-  margin-top: 20px;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  
+}*/
+
+
+/*Logo image*/
+.headerLogo {
+  background-image: url(assets/logo.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 12pt;
+  width: 200px; 
+  height: 100px; 
 }
 
-.header-top {
-  display: flex;
+/*
+.headerNav {
+<div className='headerLogo'></div></Col>
+}
+*/
+
+/*Menu hero image*/
+.menuHero {
   width: 100%;
-  height: 80px;
+  height: 720px;
+  background-image: url(assets/cafe-room.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.header-top__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.header-logo {
-  color: inherit;
-  text-decoration: inherit;
-  font-family: RobotoThin;
-  font-size: 100px;
-}
-
-.header-top__navbar {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
-.header-top__navigation {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-right: 55px;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-}
-
-.nav-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 30px;
-  color: #EBEDF2;
-  text-decoration: inherit;
-  text-transform: uppercase;
-  outline: none;
-}
-
-.bookReservations {
-  background-color: #FFFFFF;
-  border: none;
-  color: #F28B0C;
-  padding: .1em .5em;
-  text-align: center;
-  text-decoration: none;
-  float: right;
-  font-size: 25px;
-  clear: both;
-}
-
-.bookReservations:hover {
-  background-color: #BF7960;
+/*Text overlaid onto Menu's hero image*/
+/*.menuHeroText {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  translate: translate(-50%,-50%);
   color: white;
-  text-decoration: none;
+  font-size: 3em;
+}*/
+
+
+/*
+.bookReservation {
+
 }
-
-
-
+*/
 
 
 /* IDs*/
