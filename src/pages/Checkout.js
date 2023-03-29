@@ -1,179 +1,202 @@
 import React from 'react';
+import { Container, Form, InputGroup, FormControl } from 'react-bootstrap';
 
 class Checkout extends React.Component {
+     constructor(props) {
+          super(props);
+          this.state = {
+               appetizers: [
+                    { id: 1, name: "Pastry Board", price: 15, quantity: 0 },
+                    { id: 2, name: "Seasoned Fries", price: 8, quantity: 0 },
+                    { id: 3, name: "Waffle Board", price: 20, quantity: 0 },
+                    { id: 4, name: "Cheese Board", price: 15, quantity: 0 }
+               ],
+               soupsAndSalads: [
+                    { id: 1, name: "Ceasar Salad", price: 5, quantity: 0 },
+                    { id: 2, name: "Cobb Salad", price: 5, quantity: 0 },
+                    { id: 3, name: "Southwestern Salad", price: 6, quantity: 0 },
+                    { id: 4, name: "Soup of the Day", price: 7, quantity: 0 }
+               ],
+               sandwiches: [
+                    { id: 1, name: "BLT", price: 13, quantity: 0 },
+                    { id: 2, name: "Grilled Cheese", price: 10, quantity: 0 },
+                    { id: 3, name: "Breakfast Bagel", price: 9, quantity: 0 },
+                    { id: 4, name: "Veggie Sandwich", price: 10, quantity: 0 }
+               ],
+               entrees: [
+                    { id: 1, name: "French Toast", price: 14, quantity: 0 },
+                    { id: 2, name: "Pancakes", price: 16, quantity: 0 },
+                    { id: 3, name: "Eggs Benedict", price: 15, quantity: 0 },
+                    { id: 4, name: "Poke Bowl", price: 17, quantity: 0 },
+                    { id: 5, name: "Salmon", price: 25, quantity: 0 },
+                    { id: 6, name: "Brunch Burger", price: 15, quantity: 0 }
+               ],
+               desserts: [
+                    { id: 1, name: "Cheesecake", price: 7, quantity: 0 },
+                    { id: 2, name: "Cinnamon Rolls", price: 9, quantity: 0 },
+                    { id: 3, name: "Sundae", price: 8, quantity: 0 }
+               ],
+               drinks: [
+                    { id: 1, name: "Coffee", price: 7, quantity: 0 },
+                    { id: 2, name: "Tea", price: 7, quantity: 0 },
+                    { id: 3, name: "Fruit Juice", price: 7, quantity: 0 },
+                    { id: 4, name: "Fountain Drink", price: 7, quantity: 0 },
+                    { id: 5, name: "Mimosa", price: 7, quantity: 0 },
+                    { id: 6, name: "Bloody Mary", price: 7, quantity: 0 }
+               ],
+               total: 0          
+          }
+     }
+
+     handleQuantityChange(e, category, item) {
+          const quantity = parseInt(e.target.value);
+          const newState = this.state[category].map((i) => {
+               if (i.id === item.id) {
+                    return { ...i, quantity: quantity };
+               }
+               return i;
+          });
+
+          this.setState({
+               [category]: newState,
+               total: this.calculateSubtotal(),
+          });
+     }
+
+     calculateSubtotal() {
+          let subtotal = 0;
+          const categories = ['appetizers', 'soupsAndSalads', 'sandwiches', 'entrees', 'desserts', 'drinks'];
+          for (const category of categories) {
+               for (const item of this.state[category]) {
+                    subtotal += item.quantity * item.price;
+               }
+          }
+          return subtotal;
+     }
+
+     calculateTotal() {
+          if (this.calculateSubtotal() === 0) {
+               const total = 0;
+               return total;
+          } else  {
+               const subtotal = this.calculateSubtotal();
+               const tipPercentage = parseFloat((this.state.tipPercentage)/100);
+               const tipAmount = subtotal * tipPercentage;
+               const total = subtotal + tipAmount;
+               return total;
+          }
+        }
+
 
      render() {
           return (
-          <div>
-              <h1>Checkout</h1>
-              <p>This is morning snack's checkout page</p>
-              <form>
-                   <div id="appetizers">
-                        <h3>Appetizers</h3>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$12.00</span>
-                              <span class="input-group-text">Pastry Board</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$8.00</span>
-                              <span class="input-group-text">Seasoned Fries</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$20.00</span>
-                              <span class="input-group-text">Waffle Board</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$11.00</span>
-                              <span class="input-group-text">Cheese Board</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                    </div>
-                    <div id="soupSalad">
+               <Container>
+                    <Form>
+                         <h3>Appetizers</h3>
+                         {this.state.appetizers.map((item) => (
+                              <InputGroup className="mb-3" key={item.id}>
+                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                   <InputGroup.Text>{item.name}</InputGroup.Text>
+                                   <FormControl
+                                        type="number"
+                                        min="0"
+                                        aria-label=""
+                                        value={item.quantity}
+                                        onChange={(e) => this.handleQuantityChange(e, "appetizers", item)}
+                                   />
+                              </InputGroup>
+                         ))}
                          <h3>Soups & Salads</h3>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$5.00</span>
-                              <span class="input-group-text">Ceasar Salad</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$5.00</span>
-                              <span class="input-group-text">Cobb Salad</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$6.00</span>
-                              <span class="input-group-text">Southwestern Salad</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">MR</span>
-                              <span class="input-group-text">Soup of the Day</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                    </div>
-                    <div id="sandwich">
+                         {this.state.soupsAndSalads.map((item) => (
+                              <InputGroup className="mb-3" key={item.id}>
+                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                   <InputGroup.Text>{item.name}</InputGroup.Text>
+                                   <FormControl
+                                        type="number"
+                                        min="0"
+                                        aria-label=""
+                                        value={item.quantity}
+                                        onChange={(e) => this.handleQuantityChange(e, "appetizers", item)}
+                                   />
+                              </InputGroup>
+                         ))}
                          <h3>Sandwiches</h3>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$13.00</span>
-                              <span class="input-group-text">BLT</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">MR</span>
-                              <span class="input-group-text">Grilled Cheese</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div>
-                         <input class="form-check-input" type="radio" name="protein" id="protien"/>
-                         <label class="form-check-label" for="protein">Chicken</label>
-                         <input class="form-check-input" type="radio" name="protein" id="protien"/>
-                         <label class="form-check-label" for="protein">Steak</label>                   
-                         <input class="form-check-input" type="radio" name="protein" id="protien"/>
-                         <label class="form-check-label" for="protein">Bacon</label>
-                         <input class="form-check-input" type="radio" name="protein" id="protien" checked/>
-                         <label class="form-check-label" for="protein">N/A</label>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$7.00</span>
-                              <span class="input-group-text">Breakfast Bagel</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$10.00</span>
-                              <span class="input-group-text">Veggie Sandwich</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                    </div>
-                    <div id="brunch">
-                         <h3>Brunch</h3>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$14.00</span>
-                              <span class="input-group-text">French Toast</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$16.00</span>
-                              <span class="input-group-text">Pancakes</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$15.00</span>
-                              <span class="input-group-text">Eggs Benedict</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$20.00</span>
-                              <span class="input-group-text">Poke</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$25.00</span>
-                              <span class="input-group-text">Salmon</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$18.00</span>
-                              <span class="input-group-text">Burger</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                    </div>
-                    <div id="dessert">
-                         <h3>Dessert</h3>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$7.00</span>
-                              <span class="input-group-text">Cheesecake</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$9.00</span>
-                              <span class="input-group-text">Cinnamon Roll</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$8.00</span>
-                              <span class="input-group-text">Sundae</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                    </div>
-                    <div id="drinks">
+                         {this.state.sandwiches.map((item) => (
+                              <InputGroup className="mb-3" key={item.id}>
+                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                   <InputGroup.Text>{item.name}</InputGroup.Text>
+                                   <FormControl
+                                        type="number"
+                                        min="0"
+                                        aria-label=""
+                                        value={item.quantity}
+                                        onChange={(e) => this.handleQuantityChange(e, "sandwiches", item)}
+                                   />
+                              </InputGroup>
+                         ))}
+                         <h3>Entrees</h3>
+                         {this.state.entrees.map((item) => (
+                              <InputGroup className="mb-3" key={item.id}>
+                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                   <InputGroup.Text>{item.name}</InputGroup.Text>
+                                   <FormControl
+                                        type="number"
+                                        min="0"
+                                        aria-label=""
+                                        value={item.quantity}
+                                        onChange={(e) => this.handleQuantityChange(e, "entrees", item)}
+                                   />
+                              </InputGroup>
+                         ))}
+                         <h3>Desserts</h3>
+                         {this.state.desserts.map((item) => (
+                              <InputGroup className="mb-3" key={item.id}>
+                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                   <InputGroup.Text>{item.name}</InputGroup.Text>
+                                   <FormControl
+                                        type="number"
+                                        min="0"
+                                        aria-label=""
+                                        value={item.quantity}
+                                        onChange={(e) => this.handleQuantityChange(e, "desserts", item)}
+                                   />
+                              </InputGroup>
+                         ))}
                          <h3>Drinks</h3>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$2.00</span>
-                              <span class="input-group-text">Coffee</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$3.00</span>
-                              <span class="input-group-text">Juice</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$8.00</span>
-                              <span class="input-group-text">Mimosa</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$8.00</span>
-                              <span class="input-group-text">Bloody Mary</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$2.00</span>
-                              <span class="input-group-text">Fountain Drink</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text">$2.00</span>
-                              <span class="input-group-text">Tea</span>
-                              <input type="text" class="form-control" aria-label=""/>
-                         </div>
-                    </div>
-               </form>
-          </div>  
-          )  
+                         {this.state.drinks.map((item) => (
+                              <InputGroup className="mb-3" key={item.id}>
+                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                   <InputGroup.Text>{item.name}</InputGroup.Text>
+                                   <FormControl
+                                        type="number"
+                                        min="0"
+                                        aria-label=""
+                                        value={item.quantity}
+                                        onChange={(e) => this.handleQuantityChange(e, "drinks", item)}
+                                   />
+                              </InputGroup>
+                         ))}
+                         <InputGroup className="mb-3">
+                              <InputGroup.Text>Subtotal:</InputGroup.Text>
+                              <InputGroup.Text>${this.calculateSubtotal().toFixed(2)}</InputGroup.Text>
+                         </InputGroup>
+                         <InputGroup className="mb-3">
+                              <InputGroup.Text>Tip (%):</InputGroup.Text>
+                              <FormControl
+                                   type="number"
+                                   min="0"
+                                   aria-label="Tip percentage"
+                                   value={this.state.tipPercentage || ''}
+                                   onChange={(e) => this.setState({ tipPercentage: e.target.value })}
+                              />
+                         </InputGroup>
+                         <InputGroup className="mb-3">
+                              <InputGroup.Text>Total:</InputGroup.Text>
+                              <InputGroup.Text>${this.calculateTotal().toFixed(2)}</InputGroup.Text>
+                         </InputGroup>
+                    </Form>
+               </Container>
+          )
      }
 }
 
