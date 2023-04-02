@@ -1,8 +1,7 @@
 import './App.scss';
 import "./fonts/lulo-clean-one.ttf";
-import Navigation from '../src/components/navigation';
 import Home from '../src/pages/Home';
-import Checkout from '../src/pages/Checkout';
+import Order from './pages/Order';
 import Catering from '../src/pages/Catering';
 import Reservations from '../src/pages/Reservations';
 import About from '../src/pages/About';
@@ -24,7 +23,7 @@ function App() {
                          <Route exact path="/reservations" element={<Reservations />}/>
                          <Route exact path="/catering" element={<Catering />} />
                          <Route exact path="/about"  element={<About />}/>
-                         <Route exact path="/checkout" element={<Checkout />} />
+                         <Route exact path="/order" element={<Order />} />
                     </Routes>
                </Router>
           <Footer/>

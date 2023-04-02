@@ -30,7 +30,7 @@
 
 .menuHero {
     width: 100%;
-    height: 700px;
+    height: 500px;
     background-image: url(assets/cafe-room.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,14 +103,143 @@
 
 .reserveHero {
     width: auto;
-    height: 1000px;
+    height: 700px;
     background-image: url(assets/cafe-entrance.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+//CATERING
+#cateringHero {
+     width: auto;
+     height: 500px;
+     background-image: url(assets/bowls.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+#cateringInfo {
+     margin: 0;
+     font-size: 25px;
+     text-indent: 2rem;
+     text-justify: auto;
+     padding: 40px;
+}
 
+.cateringOptions {
+     font-family: "Lulo Clean Bold", sans-serif;
+     font-size: 25px;
+     padding-bottom: 40px;
+}
+#breakfastCatering, #lunchCatering {
+margin-bottom: 50px;
+}
 
+.tierOne {
+     position: relative;
+     background-color:#D9981E;
+     font-family: 'Avenir LT Std', sans-serif;
+     font-size: 20px;
+     border-radius: 10px;
+     padding: 30px;
+     margin: 10px;
+}
+
+.tierTwo {
+     position: relative;
+     background-color:#F28B0C;
+     font-family: 'Avenir LT Std', sans-serif;
+     font-size: 20px;
+     border-radius: 10px;
+     padding: 30px;
+     margin: 10px;
+}
+.addOns{
+     position: relative;
+     background-color:#BF7960;
+     font-family: 'Avenir LT Std', sans-serif;
+     font-size: 20px;
+     border-radius: 10px;
+     padding: 30px;
+     margin-top: 10px;
+
+}
+
+@media only screen and (min-width: 800px) {
+     .mealOptions{
+          display: flex;
+     }
+     .tierOne, .tierTwo{
+          width: 50%;
+     }
+     .enhancementOption {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+     
+     }
+     .cateringDescription {
+          margin-bottom: 20px;
+     }
+     .cateringPrice {
+          position: absolute;
+          margin: auto;
+          bottom: 20px;
+     }
+}
+
+@media only screen and (max-width: 799px) {
+     .mealOptions {
+          display:block;
+          flex-wrap: none;
+     }
+   }
+
+//ORDER
+.orderHero {
+     width: auto;
+     height: 500px;
+     background-image: url(assets/brunch-board.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+#orderIntro {
+     margin: 0;
+     font-size: 25px;
+     text-indent: 2rem;
+     text-justify: auto;
+     padding: 40px;
+}
+.orderCategory {
+     font-family: "Lulo Clean Bold", sans-serif;
+     font-size: 25px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+ }
+
+//ABOUT US
+.aboutUsHero {
+     width: auto;
+     height: 500px;
+     background-image: url(assets/Mimosa-on-a-Brunch-Table-scaled.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+#aboutUsIntro {
+     margin: 0;
+     font-size: 25px;
+     text-indent: 2rem;
+     text-justify: auto;
+     padding: 40px;
+}
+.teamMember{
+     font-family: "Lulo Clean Bold", sans-serif;
+     font-size: 25px;
+     padding-bottom: 40px;
+
+}
 // FOOTER
 .footerColor {
     background-color: $footer-bkg-color;
