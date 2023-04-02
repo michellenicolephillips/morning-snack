@@ -21,7 +21,7 @@ class Footer extends React.Component {
                          <NavLink href="/">MENU</NavLink>
                          <NavLink href="/catering">CATERING</NavLink>
                          <NavLink href="/about">ABOUT</NavLink>
-                         <NavLink href="/checkout">CHECKOUT</NavLink>
+                         <NavLink href="/order">ORDER</NavLink>
                     </Nav>
                     </div>
 

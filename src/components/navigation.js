@@ -18,7 +18,7 @@ class Navigation extends React.Component {
                          <NavLink href="/about">ABOUT</NavLink>
                     </NavItem>
                     <NavItem>
-                         <NavLink href="/checkout">CHECKOUT</NavLink>
+                         <NavLink href="/order">ORDER</NavLink>
                     </NavItem>    
 
                     <Button variant="warning" className="reserveButton" href="/reservations">BOOK A RESERVATION</Button>           
