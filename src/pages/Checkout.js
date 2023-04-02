@@ -92,6 +92,11 @@ class Checkout extends React.Component {
           return (
                <div>
                     <div className="orderHero"></div>
+                    <p id="cateringInfo" className="text-center justify-content-center">Not in the mood to dine in?
+                    <strong>Morning Snack</strong> offers take out so you can take your brunch wherever you'd like!
+                    When your order is ready, see the host stand to pick it up.
+                    </p>
+                    <h1 className="pageHeader text-center">ORDER NOW</h1>
                     <Container>
                          <Form>
                               <h3>Appetizers</h3>

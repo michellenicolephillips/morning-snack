@@ -116,6 +116,7 @@
      background-image: url(assets/bowls.jpg);
      background-repeat: no-repeat;
      background-size: cover;
+     background-attachment: fixed;
 }
 #cateringInfo {
      margin: 0;
@@ -133,28 +134,7 @@
 #breakfastCatering, #lunchCatering {
 margin-bottom: 50px;
 }
-@media only screen and (min-width: 800px) {
-     .mealOptions{
-          display: flex;
-     }
-     .tierOne, .tierTwo{
-          width: 50%;
-     }
-     .enhancementOption {
-          display: inline-block;
-          vertical-align: top;
-          width: 50%;
-     
-     }
-     .cateringDescription {
-          margin-bottom: 20px;
-     }
-     .cateringPrice {
-          position: absolute;
-          margin: auto;
-          bottom: 20px;
-     }
-}
+
 .tierOne {
      position: relative;
      background-color:#D9981E;
@@ -185,7 +165,28 @@ margin-bottom: 50px;
 
 }
 
-
+@media only screen and (min-width: 800px) {
+     .mealOptions{
+          display: flex;
+     }
+     .tierOne, .tierTwo{
+          width: 50%;
+     }
+     .enhancementOption {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+     
+     }
+     .cateringDescription {
+          margin-bottom: 20px;
+     }
+     .cateringPrice {
+          position: absolute;
+          margin: auto;
+          bottom: 20px;
+     }
+}
 
 @media only screen and (max-width: 799px) {
      .mealOptions {
@@ -201,8 +202,26 @@ margin-bottom: 50px;
      background-image: url(assets/brunch-board.jpg);
      background-repeat: no-repeat;
      background-size: cover;
+     background-attachment: fixed;
 }
 
+//ABOUT US
+.aboutUsHero {
+     width: auto;
+     height: 500px;
+     background-image: url(assets/Mimosa-on-a-Brunch-Table-scaled.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+#aboutUsIntro {
+     margin: 0;
+     font-size: 25px;
+     text-indent: 2rem;
+     text-justify: auto;
+     padding: 40px;
+
+}
 
 // FOOTER
 .footerColor {

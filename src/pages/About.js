@@ -1,11 +1,15 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 class About extends React.Component {
 
      render() {
           return (<>
-              <h1>WELCOME</h1>
-              <p>This is morning snack's about us page</p>
+                    <div className="aboutUsHero"></div>
+                    <p id="aboutUsIntro" className="text-center justify-content-center"> Meet the passionate team behind <strong>Morning Snack.</strong>
+                    </p>
+                    <h1 className="pageHeader text-center">MEET THE TEAM</h1>
+              <Container></Container>
           </>  
           )  
      }
