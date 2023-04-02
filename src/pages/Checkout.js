@@ -44,7 +44,7 @@ class Checkout extends React.Component {
                     { id: 5, name: "Mimosa", price: 7, quantity: 0 },
                     { id: 6, name: "Bloody Mary", price: 7, quantity: 0 }
                ],
-               total: 0          
+               total: 0
           }
      }
 
@@ -78,124 +78,127 @@ class Checkout extends React.Component {
           if (this.calculateSubtotal() === 0) {
                const total = 0;
                return total;
-          } else  {
+          } else {
                const subtotal = this.calculateSubtotal();
-               const tipPercentage = parseFloat((this.state.tipPercentage)/100);
+               const tipPercentage = parseFloat((this.state.tipPercentage) / 100);
                const tipAmount = subtotal * tipPercentage;
                const total = subtotal + tipAmount;
                return total;
           }
-        }
+     }
 
 
      render() {
           return (
-               <Container>
-                    <Form>
-                         <h3>Appetizers</h3>
-                         {this.state.appetizers.map((item) => (
-                              <InputGroup className="mb-3" key={item.id}>
-                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
-                                   <InputGroup.Text>{item.name}</InputGroup.Text>
+               <div>
+                    <div className="orderHero"></div>
+                    <Container>
+                         <Form>
+                              <h3>Appetizers</h3>
+                              {this.state.appetizers.map((item) => (
+                                   <InputGroup className="mb-3" key={item.id}>
+                                        <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                        <InputGroup.Text>{item.name}</InputGroup.Text>
+                                        <FormControl
+                                             type="number"
+                                             min="0"
+                                             aria-label=""
+                                             value={item.quantity}
+                                             onChange={(e) => this.handleQuantityChange(e, "appetizers", item)}
+                                        />
+                                   </InputGroup>
+                              ))}
+                              <h3>Soups & Salads</h3>
+                              {this.state.soupsAndSalads.map((item) => (
+                                   <InputGroup className="mb-3" key={item.id}>
+                                        <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                        <InputGroup.Text>{item.name}</InputGroup.Text>
+                                        <FormControl
+                                             type="number"
+                                             min="0"
+                                             aria-label=""
+                                             value={item.quantity}
+                                             onChange={(e) => this.handleQuantityChange(e, "appetizers", item)}
+                                        />
+                                   </InputGroup>
+                              ))}
+                              <h3>Sandwiches</h3>
+                              {this.state.sandwiches.map((item) => (
+                                   <InputGroup className="mb-3" key={item.id}>
+                                        <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                        <InputGroup.Text>{item.name}</InputGroup.Text>
+                                        <FormControl
+                                             type="number"
+                                             min="0"
+                                             aria-label=""
+                                             value={item.quantity}
+                                             onChange={(e) => this.handleQuantityChange(e, "sandwiches", item)}
+                                        />
+                                   </InputGroup>
+                              ))}
+                              <h3>Entrees</h3>
+                              {this.state.entrees.map((item) => (
+                                   <InputGroup className="mb-3" key={item.id}>
+                                        <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                        <InputGroup.Text>{item.name}</InputGroup.Text>
+                                        <FormControl
+                                             type="number"
+                                             min="0"
+                                             aria-label=""
+                                             value={item.quantity}
+                                             onChange={(e) => this.handleQuantityChange(e, "entrees", item)}
+                                        />
+                                   </InputGroup>
+                              ))}
+                              <h3>Desserts</h3>
+                              {this.state.desserts.map((item) => (
+                                   <InputGroup className="mb-3" key={item.id}>
+                                        <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                        <InputGroup.Text>{item.name}</InputGroup.Text>
+                                        <FormControl
+                                             type="number"
+                                             min="0"
+                                             aria-label=""
+                                             value={item.quantity}
+                                             onChange={(e) => this.handleQuantityChange(e, "desserts", item)}
+                                        />
+                                   </InputGroup>
+                              ))}
+                              <h3>Drinks</h3>
+                              {this.state.drinks.map((item) => (
+                                   <InputGroup className="mb-3" key={item.id}>
+                                        <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
+                                        <InputGroup.Text>{item.name}</InputGroup.Text>
+                                        <FormControl
+                                             type="number"
+                                             min="0"
+                                             aria-label=""
+                                             value={item.quantity}
+                                             onChange={(e) => this.handleQuantityChange(e, "drinks", item)}
+                                        />
+                                   </InputGroup>
+                              ))}
+                              <InputGroup className="mb-3">
+                                   <InputGroup.Text>Subtotal:</InputGroup.Text>
+                                   <InputGroup.Text>${this.calculateSubtotal().toFixed(2)}</InputGroup.Text>
+                              </InputGroup>
+                              <InputGroup className="mb-3">
+                                   <InputGroup.Text>Tip (%):</InputGroup.Text>
                                    <FormControl
                                         type="number"
                                         min="0"
-                                        aria-label=""
-                                        value={item.quantity}
-                                        onChange={(e) => this.handleQuantityChange(e, "appetizers", item)}
+                                        aria-label="Tip percentage"
+                                        value={this.state.tipPercentage || ''}
+                                        onChange={(e) => this.setState({ tipPercentage: e.target.value })}
                                    />
                               </InputGroup>
-                         ))}
-                         <h3>Soups & Salads</h3>
-                         {this.state.soupsAndSalads.map((item) => (
-                              <InputGroup className="mb-3" key={item.id}>
-                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
-                                   <InputGroup.Text>{item.name}</InputGroup.Text>
-                                   <FormControl
-                                        type="number"
-                                        min="0"
-                                        aria-label=""
-                                        value={item.quantity}
-                                        onChange={(e) => this.handleQuantityChange(e, "appetizers", item)}
-                                   />
+                              <InputGroup className="mb-3">
+                                   <InputGroup.Text>Total:</InputGroup.Text>
+                                   <InputGroup.Text>${this.calculateTotal().toFixed(2)}</InputGroup.Text>
                               </InputGroup>
-                         ))}
-                         <h3>Sandwiches</h3>
-                         {this.state.sandwiches.map((item) => (
-                              <InputGroup className="mb-3" key={item.id}>
-                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
-                                   <InputGroup.Text>{item.name}</InputGroup.Text>
-                                   <FormControl
-                                        type="number"
-                                        min="0"
-                                        aria-label=""
-                                        value={item.quantity}
-                                        onChange={(e) => this.handleQuantityChange(e, "sandwiches", item)}
-                                   />
-                              </InputGroup>
-                         ))}
-                         <h3>Entrees</h3>
-                         {this.state.entrees.map((item) => (
-                              <InputGroup className="mb-3" key={item.id}>
-                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
-                                   <InputGroup.Text>{item.name}</InputGroup.Text>
-                                   <FormControl
-                                        type="number"
-                                        min="0"
-                                        aria-label=""
-                                        value={item.quantity}
-                                        onChange={(e) => this.handleQuantityChange(e, "entrees", item)}
-                                   />
-                              </InputGroup>
-                         ))}
-                         <h3>Desserts</h3>
-                         {this.state.desserts.map((item) => (
-                              <InputGroup className="mb-3" key={item.id}>
-                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
-                                   <InputGroup.Text>{item.name}</InputGroup.Text>
-                                   <FormControl
-                                        type="number"
-                                        min="0"
-                                        aria-label=""
-                                        value={item.quantity}
-                                        onChange={(e) => this.handleQuantityChange(e, "desserts", item)}
-                                   />
-                              </InputGroup>
-                         ))}
-                         <h3>Drinks</h3>
-                         {this.state.drinks.map((item) => (
-                              <InputGroup className="mb-3" key={item.id}>
-                                   <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
-                                   <InputGroup.Text>{item.name}</InputGroup.Text>
-                                   <FormControl
-                                        type="number"
-                                        min="0"
-                                        aria-label=""
-                                        value={item.quantity}
-                                        onChange={(e) => this.handleQuantityChange(e, "drinks", item)}
-                                   />
-                              </InputGroup>
-                         ))}
-                         <InputGroup className="mb-3">
-                              <InputGroup.Text>Subtotal:</InputGroup.Text>
-                              <InputGroup.Text>${this.calculateSubtotal().toFixed(2)}</InputGroup.Text>
-                         </InputGroup>
-                         <InputGroup className="mb-3">
-                              <InputGroup.Text>Tip (%):</InputGroup.Text>
-                              <FormControl
-                                   type="number"
-                                   min="0"
-                                   aria-label="Tip percentage"
-                                   value={this.state.tipPercentage || ''}
-                                   onChange={(e) => this.setState({ tipPercentage: e.target.value })}
-                              />
-                         </InputGroup>
-                         <InputGroup className="mb-3">
-                              <InputGroup.Text>Total:</InputGroup.Text>
-                              <InputGroup.Text>${this.calculateTotal().toFixed(2)}</InputGroup.Text>
-                         </InputGroup>
-                    </Form>
-               </Container>
+                         </Form>
+                    </Container>
+               </div>
           )
      }
 }
