@@ -92,14 +92,14 @@ class Order extends React.Component {
           return (
                <div>
                     <div className="orderHero"></div>
-                    <p id="cateringInfo" className="text-center justify-content-center">Not in the mood to dine in? 
+                    <p id="orderIntro" className="text-center justify-content-center">Not in the mood to dine in? 
                     <strong> Morning Snack</strong> offers take out so you can take your brunch wherever you'd like!
                     When your order is ready, see the host stand to pick it up.
                     </p>
                     <h1 className="pageHeader text-center">ORDER NOW</h1>
                     <Container>
                          <Form>
-                              <h3>Appetizers</h3>
+                              <h3 className="orderCategory">Appetizers</h3>
                               {this.state.appetizers.map((item) => (
                                    <InputGroup className="mb-3" key={item.id}>
                                         <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
@@ -113,7 +113,7 @@ class Order extends React.Component {
                                         />
                                    </InputGroup>
                               ))}
-                              <h3>Soups & Salads</h3>
+                              <h3 className="orderCategory">Soups & Salads</h3>
                               {this.state.soupsAndSalads.map((item) => (
                                    <InputGroup className="mb-3" key={item.id}>
                                         <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
@@ -127,7 +127,7 @@ class Order extends React.Component {
                                         />
                                    </InputGroup>
                               ))}
-                              <h3>Sandwiches</h3>
+                              <h3 className="orderCategory">Sandwiches</h3>
                               {this.state.sandwiches.map((item) => (
                                    <InputGroup className="mb-3" key={item.id}>
                                         <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
@@ -141,7 +141,7 @@ class Order extends React.Component {
                                         />
                                    </InputGroup>
                               ))}
-                              <h3>Entrees</h3>
+                              <h3 className="orderCategory">Entrees</h3>
                               {this.state.entrees.map((item) => (
                                    <InputGroup className="mb-3" key={item.id}>
                                         <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
@@ -155,7 +155,7 @@ class Order extends React.Component {
                                         />
                                    </InputGroup>
                               ))}
-                              <h3>Desserts</h3>
+                              <h3 className="orderCategory">Desserts</h3>
                               {this.state.desserts.map((item) => (
                                    <InputGroup className="mb-3" key={item.id}>
                                         <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
@@ -169,7 +169,7 @@ class Order extends React.Component {
                                         />
                                    </InputGroup>
                               ))}
-                              <h3>Drinks</h3>
+                              <h3 className="orderCategory">Drinks</h3>
                               {this.state.drinks.map((item) => (
                                    <InputGroup className="mb-3" key={item.id}>
                                         <InputGroup.Text>${item.price.toFixed(2)}</InputGroup.Text>
