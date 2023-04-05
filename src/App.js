@@ -3,7 +3,6 @@ import "./fonts/lulo-clean-one.ttf";
 import Home from '../src/pages/Home';
 import Order from './pages/Order';
 import Catering from '../src/pages/Catering';
-import Reservations from '../src/pages/Reservations';
 import About from '../src/pages/About';
 import Header from '../src/components/header';
 import Footer from '../src/components/footer';
@@ -20,7 +19,6 @@ function App() {
                <Router>
                     <Routes>
                          <Route exact path="/"  element={<Home />}/>
-                         <Route exact path="/reservations" element={<Reservations />}/>
                          <Route exact path="/catering" element={<Catering />} />
                          <Route exact path="/about"  element={<About />}/>
                          <Route exact path="/order" element={<Order />} />
