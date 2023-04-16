@@ -123,7 +123,7 @@ class Order extends React.Component {
                                              min="0"
                                              aria-label=""
                                              value={item.quantity}
-                                             onChange={(e) => this.handleQuantityChange(e, "appetizers", item)}
+                                             onChange={(e) => this.handleQuantityChange(e, "soupsAndSalads", item)}
                                         />
                                    </InputGroup>
                               ))}
@@ -193,7 +193,7 @@ class Order extends React.Component {
                                         type="number"
                                         min="0"
                                         aria-label="Tip percentage"
-                                        value={this.state.tipPercentage || ''}
+                                        value={this.state.tipPercentage || 0}
                                         onChange={(e) => this.setState({ tipPercentage: e.target.value })}
                                    />
                               </InputGroup>
