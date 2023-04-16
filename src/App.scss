@@ -261,26 +261,45 @@ margin-bottom: 50px;
 .teamMember{
      font-family: "Lulo Clean Bold", sans-serif;
      font-size: 25px;
-     padding-bottom: 40px;
-}
-.teamMemberBio {
-    display: flex;
-}
-.teamMemberPic {
-    width: 20%;
-    height: 20%;
-    padding-top: 40px;
-    margin-left: 20px;
-} 
-
-.bothBios {
-    width: 70%;
 }
 .techBio, .retaurantBio {
 
     font-family: 'Avenir LT Std', sans-serif;
     font-size: 20px;
 }
+@media only screen and (min-width: 800px) {
+
+    .teamMemberBio {
+        display: flex;
+    }
+    .teamMemberPic {
+        width: 20%;
+        height: 20%;
+        border-radius: 10px;
+        margin-right: 30px;
+        margin-top: 25px;
+        border: solid 5px #591902;
+    } 
+    
+    .bothBios {
+        width: 70%;
+        margin-bottom: 50px; 
+    }
+}
+@media only screen and (max-width: 799px) {
+    .teamMemberPic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: 25px;
+        border: solid 5px #591902;
+    }
+}
+
+
 // FOOTER
 .footerColor {
     background-color: $footer-bkg-color;

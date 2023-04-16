@@ -13,7 +13,7 @@ class About extends React.Component {
               <Container>
                    <div>
                    <div className="teamMemberBio">
-                   <img className="teamMemberPic" src={Michelle} alt="michelle"/>
+                   <img className="teamMemberPic" alt="Hunter"/>
                               <div className="bothBios">
                               <h2 className="teamMember">Hunter</h2>
                                    <p className="techBio">
@@ -27,7 +27,6 @@ class About extends React.Component {
                               <img className="teamMemberPic" src={Michelle} alt="michelle"/>
                               <div className="bothBios">
                               <h2 className="teamMember">Michelle</h2>
-
                                    <p className="techBio">
                                         Michelle is pursuing a certificate in Advanced Web Application Development at Dallas College to further her career as a Software Developer. Prior to enrolling at Dallas College, Michelle worked in the Hospitality Industry. She has a bachenlor's degree 
                                         from the University of North Texas.At the start of the pandemic, she lost her job. She decided to pursue software development as a career by first teaching herself how to code. She enrolled in Dallas College to have a more structured learning. 
