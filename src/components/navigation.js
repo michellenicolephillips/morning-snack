@@ -19,58 +19,79 @@ class Navigation extends React.Component {
      render() {
           return (
                <>
-               <Nav className="justify-content-end mt-4 mb-4" gap={5}>
-                    <NavItem>
-                         <NavLink href="/">MENU</NavLink>
-                    </NavItem>
-                    <NavItem>
-                         <NavLink href="/catering">CATERING</NavLink>
-                    </NavItem>
-                    <NavItem>
-                         <NavLink href="/about">ABOUT</NavLink>
-                    </NavItem>
-                    <NavItem>
-                         <NavLink href="/order">ORDER</NavLink>
-                    </NavItem>    
+                    <Nav className="justify-content-end mt-4 mb-4" gap={5}>
+                         <NavItem>
+                              <NavLink href="/">MENU</NavLink>
+                         </NavItem>
+                         <NavItem>
+                              <NavLink href="/catering">CATERING</NavLink>
+                         </NavItem>
+                         <NavItem>
+                              <NavLink href="/about">ABOUT</NavLink>
+                         </NavItem>
+                         <NavItem>
+                              <NavLink href="/order">ORDER</NavLink>
+                         </NavItem>
 
                          <Button variant="warning" className="reserveButton" onClick={this.handleShow}><strong>BOOK A RESERVATION</strong></Button>
-                         <Modal
-                              show={this.state.show}
-                              onHide={this.handleClose}
-                              backdrop="static"
-                              keyboard={false}
-                         >
-                              <Modal.Body>
-                                   <Form>
-                                        <Form.Group className="mb-3">
-                                             <Row>
-                                                  <Form.Group as={Col}>
-                                                       <Form.Label>Guests</Form.Label>
-                                                       <Form.Control type="number" placeholder="Number of Guests" />
-                                                  </Form.Group>
+                         <div className="reserveModal modal-xl modal-dialog-centered">
+                              <div className="mb-3 ms-5 me-5">
+                                   <Modal
+                                        show={this.state.show}
+                                        onHide={this.handleClose}
+                                        backdrop="static"
+                                        keyboard={false}
+                                   >
+                                        <Modal.Body className="col row align-items-start">
+                                             <Form>
+                                                  <Form.Group >
+                                                       <Row>
+                                                            <div className="modalItem">
+                                                                 <Form.Group as={Col}>
+                                                                      <Form.Label><strong>Party Name:</strong></Form.Label>
+                                                                      <Form.Control type="name" placeholder="Party Name" />
+                                                                 </Form.Group>
+                                                            </div>
 
-                                                  <Form.Group as={Col}>
-                                                       <Form.Label>Date</Form.Label>
-                                                       <Form.Control type="date" placeholder="Enter date" />
-                                                  </Form.Group>
+                                                            <div className="modalItem">
+                                                                 <Form.Group as={Col}>
+                                                                      <Form.Label><strong>Number of Guests:</strong></Form.Label>
+                                                                      <Form.Control type="number" min="1" max="20" placeholder="Number of Guests" />
+                                                                 </Form.Group>
+                                                            </div>
 
-                                                  <Form.Group as={Col}>
-                                                       <Form.Label>Time</Form.Label>
-                                                       <Form.Control type="time" min="10:00" max="17:00" placeholder="Enter time" />
-                                                  </Form.Group>
+                                                            <div className="modalItem">
+                                                                 <Form.Group as={Col}>
+                                                                      <Form.Label><strong>Date of Visit:</strong></Form.Label>
+                                                                      <Form.Control type="date" placeholder="Enter date of visit" />
+                                                                 </Form.Group>
+                                                            </div>
 
-                                                  <Form.Group as={Col}>
-                                                       <Button variant="danger" type="submit">Find a Table</Button>
+                                                            <div className="modalItem">
+                                                                 <Form.Group as={Col}>
+                                                                      <Form.Label><strong>Time of Visit:</strong></Form.Label>
+                                                                      <Form.Control type="time" min="10:00" max="17:00" placeholder="Enter time of visit" />
+                                                                 </Form.Group>
+                                                            </div>
+
+                                                            <div className="findTable">
+                                                                 <Form.Group as={Col}>
+                                                                      <Button className="btn-lg" variant="danger" type="submit">Find a Table</Button>
+                                                                 </Form.Group>
+                                                            </div>
+                                                       </Row>
                                                   </Form.Group>
-                                             </Row>
-                                        </Form.Group>
-                                   </Form>
-                              </Modal.Body>
-                              <Modal.Footer>
-                                   <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                              </Modal.Footer>
-                         </Modal>
-                    </Nav>
+                                             </Form>
+                                        </Modal.Body>
+
+                                        <Modal.Footer>
+                                             <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+                                        </Modal.Footer>
+
+                                   </Modal>
+                              </div>
+                         </div>
+                    </Nav >
                </>
           )
      }

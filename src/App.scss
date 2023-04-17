@@ -34,6 +34,7 @@
     background-image: url(assets/cafe-room.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .menuHeader {
@@ -60,51 +61,51 @@
 }
 
 .menuSelection1 {
+    background-color: #95d9da;
+    font-family: 'Avenir LT Std', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.menuSelection2 {
+    background-color: #A1CF6B;
+    font-family: 'Avenir LT Std', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.menuSelection3 {
     background-color: #D9981E;
     font-family: 'Avenir LT Std', sans-serif;
     font-size: 20px;
     border-radius: 10px;
-    padding: 30px;
-}
-
-.menuSelection2 {
-    background-color: #BF7960;
-    font-family: 'Avenir LT Std', sans-serif;
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 30px;
-}
-
-.menuSelection3 {
-    background-color: #F28B0C;
-    font-family: 'Avenir LT Std', sans-serif;
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 30px;
+    width: 500px;
 }
 
 .menuSelection4 {
-     background-color: #0081A7;
+     background-color: #BF7960;
      font-family: 'Avenir LT Std', sans-serif;
      font-size: 20px;
      border-radius: 10px;
-     padding: 30px;
+     width: 500px;
  }
 
  .menuSelection5 {
-     background-color: #00afb9;
+     background-color: #8E9DCC;
      font-family: 'Avenir LT Std', sans-serif;
      font-size: 20px;
      border-radius: 10px;
-     padding: 30px;
+     width: 500px;
  }
 
  .menuSelection6 {
-     background-color: #95d9da;
+     background-color: #E3D7FF; 
      font-family: 'Avenir LT Std', sans-serif;
      font-size: 20px;
      border-radius: 10px;
-     padding: 30px;
+     width: 500px;
  }
 
 .menuCategory {
@@ -123,15 +124,21 @@
 
 
 
-// RESERVATIONS
+// RESERVATIONS MODAL
 
-.reserveHero {
-    width: auto;
-    height: 700px;
-    background-image: url(assets/cafe-entrance.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.modalItem {
+    font-family: 'Avenir LT Std', sans-serif;
+    padding-bottom: 30px;
 }
+
+
+.findTable {
+        text-align: center;
+        padding: 20px;
+        font-family: "Lulo Clean Bold", sans-serif;
+}
+
+
 
 //CATERING
 #cateringHero {
@@ -219,6 +226,8 @@ margin-bottom: 50px;
      }
    }
 
+
+
 //ORDER
 .orderHero {
      width: auto;
@@ -242,6 +251,8 @@ margin-bottom: 50px;
      padding-bottom: 20px;
  }
 
+
+
 //ABOUT US
 .aboutUsHero {
      width: auto;
@@ -264,6 +275,9 @@ margin-bottom: 50px;
      padding-bottom: 40px;
 
 }
+
+
+
 // FOOTER
 .footerColor {
     background-color: $footer-bkg-color;
@@ -276,5 +290,10 @@ margin-bottom: 50px;
     padding-left: 30px;
     padding-top: 70px;
     padding-bottom: 50px;
+}
+
+.footerResrvBtn {
+    font-family: "Lulo Clean One", sans-serif;
+
 }
 

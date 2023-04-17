@@ -8,8 +8,8 @@ class Home extends React.Component {
                   <>
                         <div className='menuHero'></div>
 
-                        <p className="menuOpener text-center justify-content-center"><strong>Morning Snack</strong>
-                              is a full-service, comfort-focused brunch restaurant situated in
+                        <p className="menuOpener text-center justify-content-center"><strong>Morning Snack</strong>&nbsp;is 
+                              a full-service, comfort-focused brunch restaurant situated in
                               the heart of Dallas. Enjoy breakfast, lunch, or in-between inside a renovated
                               Uptown bodega bathed in natural light. Our menu focuses on fresh, locally sourced
                               ingredients; our delicious bread is baked in-house every morning
@@ -22,11 +22,11 @@ class Home extends React.Component {
                         <p className="dailyTimes text-center"><strong>DAILY 11 AM - 5 PM</strong></p>
 
 
-                        <div class="d-flex align-content-start flex-wrap justify-content-evenly">
+                        <div class="d-flex align-content-start flex-wrap justify-content-evenly m-5">
 
                               {/*APPETIZERS*/}
-                              <section className="menuSelection1 m-4 p-2">
-                              <h2 className="menuCategory"><strong><u>APPETIZERS</u></strong></h2>
+                              <section className="menuSelection1 flex-fill m-4 p-5">
+                                    <h2 className="menuCategory"><strong><u>APPETIZERS</u></strong></h2>
                                     <div>
                                           <div className="d-flex">
                                                 <div className="p-2 w-100 bd-highlight">PASTRY BOARD</div>
@@ -75,8 +75,8 @@ class Home extends React.Component {
 
 
                               {/*SOUPS & SALADS*/}
-                              <section className="menuSelection2 m-4 p-2">
-                              <h2 className="menuCategory"><strong><u>SOUPS & SALADS</u></strong></h2>
+                              <section className="menuSelection2 flex-fill m-4 p-5">
+                                    <h2 className="menuCategory"><strong><u>SOUPS & SALADS</u></strong></h2>
                                     <div>
                                           <div className="d-flex">
                                                 <div className="p-2 w-100 bd-highlight">CAESAR</div>
@@ -125,8 +125,8 @@ class Home extends React.Component {
 
 
                               {/*SANDWICHES*/}
-                              <section className="menuSelection3 m-4 p-2">
-                              <h2 className="menuCategory"><strong><u>SANDWICHES</u></strong></h2>
+                              <section className="menuSelection3 flex-fill m-4 p-5">
+                                    <h2 className="menuCategory"><strong><u>SANDWICHES</u></strong></h2>
                                     <div>
                                           <div className="d-flex">
                                                 <div className="p-2 w-100 bd-highlight">BLT</div>
@@ -171,13 +171,13 @@ class Home extends React.Component {
                                                 </div>
                                           </div>
                                     </div>
-                                    
+
                               </section>
 
 
                               {/*ENTREES*/}
-                              <section className="menuSelection4 m-4 p-2">
-                              <h2 className="menuCategory"><strong><u>ENTREES</u></strong></h2>
+                              <section className="menuSelection4 flex-fill m-4 p-5">
+                                    <h2 className="menuCategory"><strong><u>ENTREES</u></strong></h2>
                                     <div>
                                           <div className="d-flex">
                                                 <div className="p-2 w-100 bd-highlight">FRENCH TOAST</div>
@@ -248,8 +248,8 @@ class Home extends React.Component {
 
 
                               {/*DESSERTS*/}
-                              <section className="menuSelection5 m-4 p-2">
-                              <h2 className="menuCategory"><strong><u>DESSERTS</u></strong></h2>
+                              <section className="menuSelection5 flex-fill m-4 p-5">
+                                    <h2 className="menuCategory"><strong><u>DESSERTS</u></strong></h2>
                                     <div>
                                           <div className="d-flex">
                                                 <div className="p-2 w-100 bd-highlight">CHEESECAKE</div>
@@ -287,8 +287,8 @@ class Home extends React.Component {
 
 
                               {/*DRINKS*/}
-                              <section className="menuSelection6 m-4 p-2">
-                              <h2 className="menuCategory"><strong><u>DRINKS</u></strong></h2>
+                              <section className="menuSelection6 flex-fill m-4 p-5">
+                                    <h2 className="menuCategory"><strong><u>DRINKS</u></strong></h2>
                                     <div>
                                           <div className="d-flex">
                                                 <div className="p-2 w-100 bd-highlight">COFFEE</div>
