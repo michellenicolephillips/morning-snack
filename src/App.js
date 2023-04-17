@@ -6,7 +6,6 @@ import Catering from '../src/pages/Catering';
 import About from '../src/pages/About';
 import Header from '../src/components/header';
 import Footer from '../src/components/footer';
-import 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js';
 import {
      BrowserRouter as Router,
      Routes,
