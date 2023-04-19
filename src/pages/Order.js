@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Form, InputGroup, FormControl } from 'react-bootstrap';
+import { Container, Form, InputGroup, FormControl, Button, Modal } from 'react-bootstrap';
 
 class Order extends React.Component {
      constructor(props) {
@@ -45,9 +45,16 @@ class Order extends React.Component {
                     { id: 6, name: "Bloody Mary", price: 7, quantity: 0 }
                ],
                tipPercentage: 18,
-               total: 0
-          }
+               total: 0,
+               showOrderConfirmation: false
+          };
+          this.handleClose = this.handleClose.bind(this);
+          this.handleShow = this.handleShow.bind(this);
      }
+
+     handleClose = () => this.setState({ showOrderConfirmation: false });
+     handleShow = () => this.setState({ showOrderConfirmation: true });
+     
 
      handleQuantityChange(e, category, item) {
           const quantity = parseInt(e.target.value);
@@ -93,9 +100,9 @@ class Order extends React.Component {
           return (
                <div>
                     <div className="orderHero"></div>
-                    <p id="orderIntro" className="text-center justify-content-center">Not in the mood to dine in? 
-                    <strong> Morning Snack</strong> offers take out so you can take your brunch wherever you'd like!
-                    When your order is ready, see the host stand to pick it up.
+                    <p id="orderIntro" className="text-center justify-content-center">Not in the mood to dine in?
+                         <strong> Morning Snack</strong> offers take out so you can take your brunch wherever you'd like!
+                         When your order is ready, see the host stand to pick it up.
                     </p>
                     <h1 className="pageHeader text-center">ORDER NOW</h1>
                     <Container>
@@ -203,7 +210,23 @@ class Order extends React.Component {
                                    <InputGroup.Text>${this.calculateTotal().toFixed(2)}</InputGroup.Text>
                               </InputGroup>
                          </Form>
+                         <Button className="orderButton" variant="warning" onClick={this.handleShow}>Submit Order</Button>
                     </Container>
+                    <Modal
+                         show={this.state.showOrderConfirmation}
+                         onHide={this.handleClose}
+                         backdrop="static"
+                         keyboard={false}
+                    >
+                         <Modal.Body className="col row align-items-start">
+                             Thank you for your order!
+                         </Modal.Body>
+
+                         <Modal.Footer>
+                              <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+                         </Modal.Footer>
+
+                    </Modal>
                </div>
           )
      }
