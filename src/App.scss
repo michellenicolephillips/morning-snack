@@ -168,7 +168,6 @@ margin-bottom: 50px;
 
 .tierOne {
      position: relative;
-     background-color:#D9981E;
      font-family: 'Avenir LT Std', sans-serif;
      font-size: 20px;
      border-radius: 10px;
@@ -178,7 +177,6 @@ margin-bottom: 50px;
 
 .tierTwo {
      position: relative;
-     background-color:#F28B0C;
      font-family: 'Avenir LT Std', sans-serif;
      font-size: 20px;
      border-radius: 10px;
@@ -187,13 +185,30 @@ margin-bottom: 50px;
 }
 .addOns{
      position: relative;
-     background-color:#BF7960;
      font-family: 'Avenir LT Std', sans-serif;
      font-size: 20px;
      border-radius: 10px;
      padding: 30px;
      margin-top: 10px;
+}
 
+.breakfast1 {
+    background-color: #95d9da;
+}
+.breakfast2 {
+    background-color: #A1CF6B;
+}
+.addOns1 {
+    background-color: #D9981E;
+}
+.lunch1 {
+    background-color: #BF7960;
+}
+.lunch2 {
+    background-color: #8E9DCC;
+}
+.addOns2{
+    background-color: #E3D7FF; 
 }
 
 @media only screen and (min-width: 800px) {
@@ -272,10 +287,61 @@ margin-bottom: 50px;
 .teamMember{
      font-family: "Lulo Clean Bold", sans-serif;
      font-size: 25px;
-     padding-bottom: 40px;
+}
+.techBio, .retaurantBio {
 
+    font-family: 'Avenir LT Std', sans-serif;
+    font-size: 20px;
 }
 
+.email {
+    font-family: 'Avenir LT Std', sans-serif;
+    font-size: 20px;
+    
+    a:link {
+        color: #591902;
+        font-size: 20px;
+    }
+    a:hover {
+        color: #D9981E;
+    }
+    a:visited {
+        color: #95d9da;
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    .teamMemberBio {
+        display: flex;
+    }
+    .teamMemberPic {
+        width: 20%;
+        height: 20%;
+        border-radius: 10px;
+        margin-right: 30px;
+        margin-top: 25px;
+        border: solid 5px #591902;
+    } 
+    
+    .bothBios {
+        width: 70%;
+        margin-bottom: 50px; 
+    }
+}
+@media only screen and (max-width: 799px) {
+    .teamMemberPic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: 25px;
+        border: solid 5px #591902;
+    }
+}
 
 
 // FOOTER
