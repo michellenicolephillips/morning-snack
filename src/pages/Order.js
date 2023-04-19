@@ -44,6 +44,7 @@ class Order extends React.Component {
                     { id: 5, name: "Mimosa", price: 7, quantity: 0 },
                     { id: 6, name: "Bloody Mary", price: 7, quantity: 0 }
                ],
+               tipPercentage: 18,
                total: 0
           }
      }
@@ -193,7 +194,7 @@ class Order extends React.Component {
                                         type="number"
                                         min="0"
                                         aria-label="Tip percentage"
-                                        value={this.state.tipPercentage || 0}
+                                        value={this.state.tipPercentage || 18}
                                         onChange={(e) => this.setState({ tipPercentage: e.target.value })}
                                    />
                               </InputGroup>

@@ -15,19 +15,19 @@ class Catering extends React.Component {
                     <Container id="breakfastCatering">
                          <h3 className="cateringOptions">Breakfast</h3>
                          <div className="mealOptions">
-                              <div className="tierOne">
+                              <div className="tierOne breakfast1">
                                    <p>MORNING PASTRIES PACKAGE</p>
                                    <p className="cateringDescription"> An assortment of muffins, bagels, danishes, croissants, served with butter and a variety of jams. Coffee and water available for beverages</p>
                                    <p className="cateringPrice">$15 PP</p>
                               </div>
-                              <div className="tierTwo">
+                              <div className="tierTwo breakfast2">
                                    <p>AMERICAN BREAKFAST PACKAGE</p>
                                    <p className="cateringDescription">Scrambled Eggs, bacon, breakfast sausage, southwestern breakfast potatoes, and an assortment of pastries. Coffee, your choice of 2 types of juices, and water available for beverages</p>
                                    <p className="cateringPrice">$25 PP</p>
                               </div>
                          </div>
 
-                         <div className="addOns">
+                         <div className="addOns addOns1">
                               <h4>ENHANCEMENTS</h4>
                               <p>Evelate your breakfast by adding on one of the options below to your chosen breakfast package.</p>
                               <div className="enhancementOption">
@@ -55,7 +55,7 @@ class Catering extends React.Component {
                     <Container id="lunchCatering">
                          <h3 className="cateringOptions">Lunch</h3>
                          <div className="mealOptions">
-                              <div className="tierOne">
+                              <div className="tierOne lunch1">
                                    <p>LIGHT LUNCH PACKAGE</p>
                                    <p> An assortment of sandwiches, 2 soups of your choice, and caesar salad. Iced Tea, Coke Products, and Water avaialble for beverages</p>
                                    <ul className="cateringDescription">
@@ -64,14 +64,14 @@ class Catering extends React.Component {
                                    </ul>
                                    <p className="cateringPrice">$20 PP</p>
                               </div>
-                              <div className="tierTwo">
+                              <div className="tierTwo lunch2">
                                    <h4> BURGERS AND SIDES PACKAGE</h4>
                                    <p className="cateringDescription">Beef or black bean patties, American Chees, Lettuce, Tomato, Onion, Pickles served on a brioche bung. Fries and caesar salad for sides. Iced Tea, Coke Products, and water available for beverages</p>
                                    <p className="cateringPrice">$30 PP</p>
                               </div>
                          </div>
 
-                         <div className="addOns">
+                         <div className="addOns addOns2">
                               <h4>ENHANCEMENTS</h4>
                               <p>Energize your guests' afternoon with one of the options below as an addition to your chosen lunch package.</p>
                               <div className="enhancementOption">
