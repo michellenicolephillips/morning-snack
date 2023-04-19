@@ -219,7 +219,7 @@ class Order extends React.Component {
                          keyboard={false}
                     >
                          <Modal.Body className="col row align-items-start">
-                             Thank you for your order!
+                              Your total is ${this.calculateTotal().toFixed(2)}. Your order will be ready in 30 minutes. Please see the host stand to pick up. Thank you!
                          </Modal.Body>
 
                          <Modal.Footer>
