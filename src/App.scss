@@ -269,7 +269,13 @@ margin-bottom: 50px;
     color: black;
     margin-bottom: 20px;
 }
-
+.accordion-button:not(.collapsed) {
+    color: #D9981E;
+    background-color: rgba(217,152,30,.1);
+}
+.totalSection {
+    margin-top: 20px;
+}
 
 //ABOUT US
 .aboutUsHero {
