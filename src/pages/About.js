@@ -1,9 +1,26 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import Michelle from '../assets/michelle.jpg';
 import Hunter from '../assets/hunter.jpg'
 
 class About extends React.Component {
+     constructor(props) {
+          super(props);
+          this.state = {
+               showTechBio1: false,
+               showTechBio2: false
+          }
+          this.handleClick = this.handleClick.bind(this);
+          this.handleClick2 = this.handleClick2.bind(this);
+     }
+        
+
+     handleClick() {
+          this.setState(prevState => ({ showTechBio1: !prevState.showTechBio1 }));
+     }
+     handleClick2() {
+          this.setState(prevState => ({ showTechBio2: !prevState.showTechBio2 }));
+     }
 
      render() {
           return (<>
@@ -12,11 +29,16 @@ class About extends React.Component {
                </p>
                <h1 className="pageHeader text-center">MEET THE TEAM</h1>
                <Container>
+                   
                          <div className="teamMemberBio">
-                              <img className="teamMemberPic" src={Hunter} alt="Hunter" />
+                              <div className="picAndButton">
+                              <img  className="teamMemberPic"src={Hunter} alt="Hunter" />
+                              <Button variant="custom" className="bioSwitch" onClick={this.handleClick} >{this.state.showTechBio1 ? 'Show Restaurant Bio' : 'Show School Bio'}</Button>
+                              </div>
+
                               <div className="bothBios">
-                                   <h2 className="teamMember">Hunter</h2>
-                                   <p className="techBio">
+                                   <h2 className="teamMember">Hunter</h2> 
+                                   <p className={this.state.showTechBio1? "techBio" : "hidden"}>
                                         Hunter is enrolled in Dallas College to complete dual associates in Web Design & Production and Experience Design/User Interface (UX/UI), respectively.
                                         Before attending Dallas College in 2021, Hunter graduated from UNT Dallas with a Bachelor’s of Science in Public Health.
                                         His work primarily involves alleviating food insecurity, fighting environmental justice, and performing evidence-based research via GIS, literary analysis, or study design.
@@ -24,7 +46,7 @@ class About extends React.Component {
                                         Ever since creating that initial site, Hunter has had a passionate interest in web design and visual web content.
                                         Through web design, he hopes to find a job or two that will fund his long-term goal of going to graduate school for ecology and environmental science.
                                    </p>
-                                   <p className="retaurantBio">
+                                   <p className={this.state.showTechBio1? "hidden" : "restaurantBio"}>
                                    Hunter’s love for cooking came from watching Anthony Bourdain’s No Reservations as a kid. 
                                    Seeing his idol galavant across the globe eating some of the strangest yet most scrumptious edible concoctions he had ever seen struck a chord in his young heart. 
                                    As he grew up (and consumed more and more international foods), Hunter began to realize that what was truly the best part of eating was not the complexity of a meal’s palette (though that did help), 
@@ -37,16 +59,21 @@ class About extends React.Component {
                               </div>
                          </div>
                          <div className="teamMemberBio">
+                              <div className="picAndButton">
                               <img className="teamMemberPic" src={Michelle} alt="michelle" />
+                              <Button variant="custom" className="bioSwitch" onClick={this.handleClick2} >{this.state.showTechBio2 ? 'Show Restaurant Bio' : 'Show School Bio'}</Button>
+                              </div>
+                         
                               <div className="bothBios">
                                    <h2 className="teamMember">Michelle</h2>
-                                   <p className="techBio">
+                             
+                                   <p className={this.state.showTechBio2? "techBio" : "hidden"}>
                                         Michelle is pursuing a certificate in Advanced Web Application Development at Dallas College to further her career as a Software Developer. Prior to enrolling at Dallas College, Michelle worked in the Hospitality Industry. She has a bachenlor's degree
                                         from the University of North Texas.At the start of the pandemic, she lost her job. She decided to pursue software development as a career by first teaching herself how to code. She enrolled in Dallas College to have a more structured learning.
                                         During her time in school, she landed her first job as a software developer. Her coursework as Dallas college is helping her in her newfound career. She hopes to one day join a Master's program to continue developing her skills in tech.
                                         She will complete her certificate in Summer 2023.
                                    </p>
-                                   <p className="retaurantBio">
+                                   <p className={this.state.showTechBio2? "hidden" : "restaurantBio"}>
                                         Michelle found her passion for food as a young girl in her grandmother's kitchen. Every weekend she would visit her grandparents' house where she would make breakfast with her grandmother. They would make a tall stack of
                                         pancakes or french toast for everyone to enjoy. Paired with maple syrup and homemade jams, weekend breakfasts with her family are where Michelle's interest in cooking grew. Upon starting college, Michelle would make brunch from scratch
                                         for her roommates every weekend similar to the breakfasts she made as a child. She got a business degree so she would have both halves to building a restaurant of her own. She found a business partner in Hunter whow as just as passionate about

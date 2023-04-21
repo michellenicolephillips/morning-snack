@@ -65,7 +65,7 @@ class Catering extends React.Component {
                                    <p className="cateringPrice">$20 PP</p>
                               </div>
                               <div className="tierTwo lunch2">
-                                   <h4> BURGERS AND SIDES PACKAGE</h4>
+                                   <p> BURGERS AND SIDES PACKAGE</p>
                                    <p className="cateringDescription">Beef or black bean patties, American Chees, Lettuce, Tomato, Onion, Pickles served on a brioche bung. Fries and caesar salad for sides. Iced Tea, Coke Products, and water available for beverages</p>
                                    <p className="cateringPrice">$30 PP</p>
                               </div>
