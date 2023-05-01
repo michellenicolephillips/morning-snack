@@ -9,23 +9,24 @@ import Footer from '../src/components/footer';
 import {
      BrowserRouter as Router,
      Routes,
-     Route   } from "react-router-dom";
+     Route
+} from "react-router-dom";
 
 function App() {
-  return (
-     <div className="App">
-          <Header/>
-               <Router>
+     return (
+          <div className="App">
+               <Header />
+               <Router basename='/'>
                     <Routes>
-                         <Route exact path="/#/"  element={<Home />}/>
-                         <Route exact path="/#/catering" element={<Catering />} />
-                         <Route exact path="/#/about"  element={<About />}/>
-                         <Route exact path="/#/order" element={<Order />} />
+                         <Route exact path="/" element={<Home />} />
+                         <Route exact path="/catering" element={<Catering />} />
+                         <Route exact path="/about" element={<About />} />
+                         <Route exact path="/order" element={<Order />} />
                     </Routes>
                </Router>
-          <Footer/>
-     </div>
-         
+               <Footer />
+          </div>
+
      );
 }
 

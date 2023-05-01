@@ -21,16 +21,16 @@ class Navigation extends React.Component {
                <>
                     <Nav className="justify-content-end mt-4 mb-4" gap={5}>
                          <NavItem>
-                              <NavLink href="/#/">MENU</NavLink>
+                              <NavLink href="/">MENU</NavLink>
                          </NavItem>
                          <NavItem>
-                              <NavLink href="/#/catering">CATERING</NavLink>
+                              <NavLink href="/catering">CATERING</NavLink>
                          </NavItem>
                          <NavItem>
-                              <NavLink href="/#/about">ABOUT</NavLink>
+                              <NavLink href="/about">ABOUT</NavLink>
                          </NavItem>
                          <NavItem>
-                              <NavLink href="/#/order">ORDER</NavLink>
+                              <NavLink href="/order">ORDER</NavLink>
                          </NavItem>
 
                          <Button variant="warning" className="reserveButton" onClick={this.handleShow}><strong>BOOK A RESERVATION</strong></Button>
