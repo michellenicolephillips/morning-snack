@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/morning-snack/static/css/main.1ba40a45.css",
+    "main.js": "/morning-snack/static/js/main.26f47c70.js",
+    "static/js/787.8c9d7775.chunk.js": "/morning-snack/static/js/787.8c9d7775.chunk.js",
+    "static/media/menu-gallery.svg": "/morning-snack/static/media/menu-gallery.9381b52f626ebf7f212a.svg",
+    "static/media/cafe-room.png": "/morning-snack/static/media/cafe-room.c185dafdeffafe8cb077.png",
+    "static/media/michelle.jpg": "/morning-snack/static/media/michelle.c20c5b671512ed220c68.jpg",
+    "static/media/bowls.jpg": "/morning-snack/static/media/bowls.66cd57471a1d8514e73a.jpg",
+    "static/media/brunch-board.jpg": "/morning-snack/static/media/brunch-board.ac8f611fb2b5983c143a.jpg",
+    "static/media/Mimosa-on-a-Brunch-Table-scaled.jpg": "/morning-snack/static/media/Mimosa-on-a-Brunch-Table-scaled.8b3146633fcd7035150c.jpg",
+    "static/media/lulo-clean-outline.otf": "/morning-snack/static/media/lulo-clean-outline.188124daba3cba04dbdc.otf",
+    "static/media/hunter.jpg": "/morning-snack/static/media/hunter.456cb692cf4b326720a8.jpg",
+    "static/media/lulo-clean-one.ttf": "/morning-snack/static/media/lulo-clean-one.2a49f464d2688a18cedd.ttf",
+    "static/media/lulo-clean-bold.ttf": "/morning-snack/static/media/lulo-clean-bold.cf6ce051896b18d3449b.ttf",
+    "static/media/logo.png": "/morning-snack/static/media/logo.00d18f61b483690adb39.png",
+    "index.html": "/morning-snack/index.html",
+    "main.1ba40a45.css.map": "/morning-snack/static/css/main.1ba40a45.css.map",
+    "main.26f47c70.js.map": "/morning-snack/static/js/main.26f47c70.js.map",
+    "787.8c9d7775.chunk.js.map": "/morning-snack/static/js/787.8c9d7775.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ba40a45.css",
+    "static/js/main.26f47c70.js"
+  ]
+}
