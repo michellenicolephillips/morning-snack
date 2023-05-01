@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/morning-snack/static/css/main.1ba40a45.css",
-    "main.js": "/morning-snack/static/js/main.26f47c70.js",
+    "main.js": "/morning-snack/static/js/main.bda470c4.js",
     "static/js/787.8c9d7775.chunk.js": "/morning-snack/static/js/787.8c9d7775.chunk.js",
     "static/media/menu-gallery.svg": "/morning-snack/static/media/menu-gallery.9381b52f626ebf7f212a.svg",
     "static/media/cafe-room.png": "/morning-snack/static/media/cafe-room.c185dafdeffafe8cb077.png",
@@ -16,11 +16,11 @@
     "static/media/logo.png": "/morning-snack/static/media/logo.00d18f61b483690adb39.png",
     "index.html": "/morning-snack/index.html",
     "main.1ba40a45.css.map": "/morning-snack/static/css/main.1ba40a45.css.map",
-    "main.26f47c70.js.map": "/morning-snack/static/js/main.26f47c70.js.map",
+    "main.bda470c4.js.map": "/morning-snack/static/js/main.bda470c4.js.map",
     "787.8c9d7775.chunk.js.map": "/morning-snack/static/js/787.8c9d7775.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ba40a45.css",
-    "static/js/main.26f47c70.js"
+    "static/js/main.bda470c4.js"
   ]
 }
