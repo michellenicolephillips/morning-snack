@@ -15,8 +15,7 @@ class Home extends React.Component {
                               ingredients; our delicious bread is baked in-house every morning
                               before opening; and our famous mimosas are always available.</p>
 
-                        {/*Add masonry image gallery here*/}
-
+                        <div className="menuGallery"></div>
 
                         <h1 className="pageHeader text-center">BRUNCH MENU</h1>
                         <p className="dailyTimes text-center"><strong>DAILY 11 AM - 5 PM</strong></p>

@@ -7,18 +7,16 @@ class Header extends React.Component {
      render() {
           return (
                <>
-               <header className="header">
-               <Container>
-                    <Row>
-                         <Col><div className="headerLogo"></div></Col>
-                    </Row>
-                    <Row>
-                         <Col><div className='headerNav'><Navigation /></div></Col>
-                    </Row>
-               </Container>  
-               </header>  
-               </>  
-          )  
+                    <header className="header">
+                         <Container>
+                              <Row>
+                                   <Col sm={4}><div className="headerLogo"></div></Col>
+                                   <Col sm={8}><div className='headerNav'><Navigation /></div></Col>
+                              </Row>
+                         </Container>
+                    </header>
+               </>
+          )
      }
 }
 

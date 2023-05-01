@@ -22,8 +22,7 @@ class Footer extends React.Component {
                               </Nav>
                          </div>
 
-                         <address className="footerAddress ">123 Brunch St, Dallas, TX 75206</address>
-
+                         <address className="footerAddress">123 Brunch St, Dallas, TX 75206</address>
                     </footer>
                </>
           )
